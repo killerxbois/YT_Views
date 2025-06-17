@@ -11,9 +11,7 @@ app = Client("yt_views_bot", bot_token=BOT_TOKEN)
 
 @app.on_message(filters.command("start"))
 def start(client, message):
-    message.reply("👋 Welcome to *YT Views Bot Send me a valid YouTube video or Shorts link\.\n\n⚠️ *Important Terms & Conditions*:\n\- This bot is for educational use only\.
-\- Using bots to increase YouTube views is against YouTube's ToS\.
-\- We are not responsible for any misuse\.", parse_mode="MarkdownV2")
+    message.reply("👋 Welcome to *YT Views Bot Send me a valid YouTube video or Shorts link")
 
 @app.on_message(filters.text & ~filters.command("start"))
 def get_link(client, message):
